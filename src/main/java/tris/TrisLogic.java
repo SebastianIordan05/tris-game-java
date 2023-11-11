@@ -92,5 +92,9 @@ public class TrisLogic {
         }
         return ' ';
     }
+
+    public char getCell(int row, int col) {
+        return grid[row][col];
+    }
 }
 

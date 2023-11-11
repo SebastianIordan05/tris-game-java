@@ -1,9 +1,11 @@
 package tris;
 
 public class JavaRender {
+    private final TrisLogic trisLogic;
     private char[][] grid;
 
-    public JavaRender() {
+    public JavaRender(TrisLogic trisLogic) {
+        this.trisLogic = trisLogic;
         grid = new char[3][3];
         initializeGrid();
     }
@@ -29,7 +31,7 @@ public class JavaRender {
         for (int row = 0; row < 3; row++) {
             System.out.print("| ");
             for (int col = 0; col < 3; col++) {
-                System.out.print(grid[row][col] + " | ");
+                System.out.print(trisLogic.getCell(row, col) + " | ");  // Modificato
             }
             System.out.println("\n-------------");
         }

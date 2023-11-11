@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        JavaRender trisRender = new JavaRender();
         TrisLogic trisLogic = new TrisLogic();
+        JavaRender trisRender = new JavaRender(trisLogic);
         Scanner scanner = new Scanner(System.in);
-
+        
         trisRender.printGrid();
 
         while (true) {
